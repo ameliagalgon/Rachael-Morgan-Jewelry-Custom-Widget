@@ -91,19 +91,19 @@ class rachael_morgan_jewelry_landing_widget extends WP_Widget {
         echo $before_widget;
 
         // Display the widget
-        echo '<div class="widget-text wp_widget_plugin_box">';
+        echo '<div class="widget_content_box wp_widget_plugin_box">';
 
         if ( $logo_uri )?>
-            <img src="<?php echo esc_url($instance['logo_uri']); ?>" />
+            <img id="landing-logo" src="<?php echo esc_url($instance['logo_uri']); ?>" />
         <?php
 
         if ( $image_uri )?>
-            <img src="<?php echo esc_url($instance['image_uri']); ?>" />
+            <img id="landing-img" src="<?php echo esc_url($instance['image_uri']); ?>" />
         <?php
 
 
         echo '</div>';
-
+        
         // WordPress core after_widget hook (always include )
         echo $after_widget;
 
